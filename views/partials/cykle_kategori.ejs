@@ -1,0 +1,59 @@
+<div class="cykle-kategori">
+        <h1>Cykler</h1>
+        <hr>
+        <ul class="cykle-kategorier">
+            <li>
+                <a href="/cykle_kategori/1">Mountainbikes
+                    <br>
+                    <img src="/img/mountainbikes.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="/cykle_kategori/2">Racercykler
+                    <br>
+                    <img src="/img/racercykler.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="/cykle_kategori/3">Damecykler
+                    <br>
+                    <img src="/img/damecykler.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="/cykle_kategori/4">Herrecykler
+                    <br>
+                    <img src="/img/herrecykler.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="/cykle_kategori/5">Trehjulede
+                    <br>
+                    <img src="/img/trehjulede.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="/cykle_kategori/6">Børnecykler
+                    <br>
+                    <img src="/img/boernecykler.jpg">
+                </a>
+            </li>
+        </ul>
+        
+        <li class="produkter">
+            <%
+                    
+            cykler.forEach( (ar)=> { %>
+                <div class="cykle-info">
+                    <%- `<h1>${ar.mærke} ${ar.model}</h1>` %>
+                        <%- `<p><img src="/img/${ar.billede}"></p>` %>
+                            <%- `<p>${ar.beskrivelse}</p>` %>
+                                 <%- `<p><strong>Pris:</strong> ${ar.pris}</p>` %>
+                                    <%- `<br>` %>
+                                        <%- `<a class="læsMere" href="">Læs Mere` %>
+                </div>
+                <% });
+                %>
+        </li>
+    </div>
+    <!-- cykel-kategori end -->
