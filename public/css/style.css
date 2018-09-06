@@ -45,6 +45,7 @@ nav li:hover {
 nav li:active {
     background-color: #000000 ;
     color: #FFFFFF;
+    cursor: default;
 }
 
 #produkter {
@@ -75,10 +76,10 @@ h1 {
     color: #FF9E41;
 }
 
-.læsMere {
+a.læsMere {
     text-align: center;
     color: #FF9E41;
-    font-size: 12px;
+    display: flex;
 }
 
 #cykle-info {
