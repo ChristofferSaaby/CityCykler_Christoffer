@@ -40,11 +40,11 @@
             </li>
         </ul>
         
-        <li class="produkter">
+        <li id="produkter">
             <%
                     
             cykler.forEach( (ar)=> { %>
-                <div class="cykle-info">
+                <div id="cykle-info">
                     <%- `<h1>${ar.mærke} ${ar.model}</h1>` %>
                         <%- `<p><img src="/img/${ar.billede}"></p>` %>
                             <%- `<p>${ar.beskrivelse}</p>` %>

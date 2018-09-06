@@ -1,0 +1,54 @@
+<h1><strong>Opret Produkt</strong></h1>
+<form id="opretProdukter" role="form" method="POST" action="/admin">
+<p>Mærke</p>
+<select id="fk_mærke" name="fk_mærke">
+    <option value="tom">Vælg Mærke</option>
+    <option value="1">Kildemose</option>
+    <option value="2">MBK</option>
+    <option value="3">Mustang</option>
+    <option value="4">Jensen</option>
+    <option value="5">Bianchi</option>
+    <option value="6">Tårnby</option>
+    <option value="7">Winther</option>
+    <option value="8">MET</option>
+    <option value="9">Lazer</option>
+    <option value="10">VDO</option>
+    <option value="11">Tranz-x</option>
+    <option value="12">Michelin</option>
+    <option value="13">Lipu</option>
+    <option value="14">Sidi</option>
+    <option value="15">Nike</option>
+    <option value="16">Alessi Bianchi</option>
+    <option value="17">John D</option>
+    <option value="18">Hamax</option>
+    <option value="19">Shimano</option>
+</select>
+<p>Model</p>
+<input type="text" name="model" id="model">
+<p>Pris</p>
+<input type="text" name="pris" id="pris">
+<p>Beskrivelse</p>
+<input type="text" name="beskrivelse" id="beskrivelse">
+<p>Kategori</p>
+<select id="fk_kategori" name="fk_kategori">
+    <option value="tom">Vælg Kategori</option>
+    <option value="1">Mountainbikes</option>
+    <option value="2">Racercykler</option>
+    <option value="3">Damecykler</option>
+    <option value="4">Herrecykler</option>
+    <option value="5">Trehjulede</option>
+    <option value="6">Børnecykler</option>
+    <option value="7">Cyklehjelme</option>
+    <option value="8">Cykle Computere</option>
+    <option value="9">Værktøj</option>
+    <option value="10">Cykletøj</option>
+    <option value="11">Barnestole</option>
+    <option value="12">Reservedele</option>
+</select>
+<p>Billede</p>
+<input type="file" name="billede" id="billede">
+<br>
+<br>
+<button type="submit" id="opretProdukt">Opret</button>
+
+</form>

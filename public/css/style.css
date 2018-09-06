@@ -47,8 +47,9 @@ nav li:active {
     color: #FFFFFF;
 }
 
-.produkter {
+#produkter {
     list-style: none;
+    width: 100%;
 }
 
 .cykle-kategori li, .udstyr-kategori li {
@@ -74,27 +75,42 @@ h1 {
     color: #FF9E41;
 }
 
-.cykle-info {
-    height: 300px;
-    width: 500px;
+.læsMere {
+    text-align: center;
+    color: #FF9E41;
+    font-size: 12px;
+}
+
+#cykle-info {
+    width: 100%;
     border: solid #EDEDED;
 }
 
-.cykle-info p {
+#cykle-info p {
     white-space: nowrap;
     max-width: 1448px;
     overflow: hidden;
     text-overflow: ellipsis;
     
 }
-
-.cykle-info li {
+#cykle-info li {
     width: 100%;
 }
 
-.cykle-info img {
+#cykle-info img {
     height: 116px;
     width: 80px;
     float: right;
     display: flex;
+   }
+
+   .forside-indhold img {
+       float: right;
+       width: 25%;
+   }
+
+   footer {
+       background-color: #C9CACC;
+       color: #A4A4A4;
+       text-align: center;
    }

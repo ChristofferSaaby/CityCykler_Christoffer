@@ -1,5 +1,14 @@
-<section>
-    <h2>Forside</h2>
-
-    
-</section>
+<div class="forside-indhold">
+    <section>
+        <article>
+            <img src="img/forside.png">
+            
+            <% text.forEach( (ar) => { %>
+        <div class="text-indhold">
+            <%- `<p>${ar.text}</p>` %>
+            <%- `<br>` %>
+        </div>
+            <% }); %>
+        </article>
+    </section>
+</div>
