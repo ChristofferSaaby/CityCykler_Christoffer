@@ -1,0 +1,35 @@
+<h1><strong>Opret Produkt</strong></h1>
+<form id="opretProdukter" role="form" method="POST" action="/admin_add">
+    <p>Mærke</p>
+    <select id="fk_mærke" name="fk_mærke">
+        <option value="tom">Vælg Mærke</option>
+        <% mækOption.forEach( (ar)=> { %>
+        <%- `<option>${ar.mærke}</option>` %>
+        <% });%>
+    </select>
+
+    <p>Model</p>
+    <input type="text" name="model" id="model">
+
+    <p>Pris</p>
+    <input type="text" name="pris" id="pris">
+
+    <p>Beskrivelse</p>
+    <textarea type="text" name="beskrivelse" id="beskrivelse" rows="20" cols="50" maxlength="800"></textarea>
+
+    <p>Kategori</p>
+    <select id="fk_kategori" name="fk_kategori">
+        <option value="tom">Vælg Kategori</option>
+        <% katOption.forEach( (ar)=> { %>
+        <%- `<option>${ar.kategori}</option>` %>
+        <% });%>
+    </select>
+
+    <p>Billede</p>
+    <input type="file" name="billede" id="billede">
+
+    <br>
+    <br>
+    <button type="submit" id="opretProdukt">Opret</button>
+
+</form>

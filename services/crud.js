@@ -1,4 +1,4 @@
-function getAll() {
+function getAllProdukter() {
     return new Promise((resolve, reject) => {
       var sql = `SELECT
       produkter.billede,
@@ -22,7 +22,7 @@ function getAll() {
     });
  }
  
- function getAllByKategori(id) {
+ function getAllProdukterByKategori(id) {
     return new Promise((resolve, reject) => {
         var sql = `SELECT * FROM produkter
         INNER JOIN kategori
@@ -59,11 +59,6 @@ function getAll() {
 
  
  module.exports = {
-    getAll,
-    getAllByKategori,
+    getAllProdukter,
     getForsideText,
-    // createOne,
-    // updateOne,
-    // deleteOne,
-    // getOneProductByProduct,
  }

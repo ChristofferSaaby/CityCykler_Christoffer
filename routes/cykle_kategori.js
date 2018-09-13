@@ -1,8 +1,9 @@
-const service = require('../services/crud.js');
+const crud = require('../services/crud.js');
+const kategorier = require('../services/kategorier.js');
 module.exports = (app) => {
    app.get('/cykle_kategori', async function (req, res) {
        try {
-           alleCykler = await service.getAll();
+           alleCykler = await crud.getAllProdukter();
            res.render('pages/cykle_kategori', {
                "cykler": alleCykler
            });
@@ -13,7 +14,7 @@ module.exports = (app) => {
    });
    app.get('/cykle_kategori/:kategori', async function (req, res) {
        try {
-           cykleKategori = await service.getAllByKategori(req.params.kategori);
+           cykleKategori = await kategorier.getAllProdukterByKategori(req.params.kategori);
            console.log(cykleKategori);
            res.render('pages/cykle_kategori', {
                "cykler": cykleKategori

@@ -4,6 +4,7 @@ module.exports = function (app) {
     require('./udstyr_kategori')(app);
     require('./login')(app);
     require('./admin')(app);
+    require('./admin_add')(app);
 
     
     

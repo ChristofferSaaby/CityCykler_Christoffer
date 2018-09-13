@@ -1,6 +1,7 @@
 #baggrund {
-    background: url("/public/img/baggrund.png");
+    background: url("/img/baggrund.png");
     background-size: cover;
+    background-repeat: no-repeat;
     /*width: 100%;*/
 }
 
@@ -22,6 +23,10 @@ nav ul {
     border-color: #EDEDED;
     padding: 0%;
     
+}
+
+nav a {
+    display: block;
 }
 
 nav li {
