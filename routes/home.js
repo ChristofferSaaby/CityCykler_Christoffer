@@ -1,8 +1,8 @@
-const service = require('../services/crud.js');
+const tekster = require('../services/tekster.js');
 module.exports = (app) => {
    app.get('/', async function (req, res) {
        try {
-           forsideText = await service.getForsideText();
+           forsideText = await tekster.getForsideText();
            res.render('pages/index', {
                "text": forsideText
            });

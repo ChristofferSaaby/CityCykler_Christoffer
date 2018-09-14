@@ -9,7 +9,7 @@ module.exports = (app) => {
         var beskrivelse = post.beskrivelse;
         var kategori = post.fk_kategori;
         var billede = post.billede;
-
+        console.log(post);
         if (mærke != "" && model != "" && pris != "" && beskrivelse != "" && kategori != "" && billede != "") {
             // event.preventDefault();
 
@@ -42,18 +42,19 @@ module.exports = (app) => {
             res.render('pages/admin_add', { user: user, message: message, messageType: "alert-danger" });
         }
     });
-
+    
     app.get('/admin_add', async function (req, res) {
         try {
             alleKategorier = await kategorier.getKategorier();
             alleMærker = await kategorier.getMærker();
             res.render('pages/admin_add', {
                 "katOption": alleKategorier,
-                "mækOption": alleMærker
+                "mærOption": alleMærker
             });
         } catch (err) {
             console.log(err);
             res.send(err);
         }
     });
-};
+    };
+

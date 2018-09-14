@@ -1,4 +1,4 @@
-const service = require('../services/crud.js');
+const service = require('../services/kategorier.js');
 module.exports = (app) => {
    app.get('/udstyr_kategori', async function (req, res) {
        try {

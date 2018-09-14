@@ -1,0 +1,15 @@
+<li id="produkter">
+        <%
+                
+        cykler.forEach( (ar)=> { %>
+            <div id="cykle-info">
+                <%- `<h1>${ar.mærke} ${ar.model}</h1>` %>
+                    <%- `<p><img src="/img/${ar.billede}"></p>` %>
+                        <%- `<p>${ar.beskrivelse}</p>` %>
+                             <%- `<p><strong>Pris:</strong> ${ar.pris} kr.</p>` %>
+                             <%- `<a class="læsMere" href="">Læs Mere</a>` %>
+                                <%- `<br>` %>
+            </div>
+            <% });
+            %>
+    </li>

@@ -12,11 +12,11 @@ module.exports = function (app) {
 
 		var sql =`
 			SELECT
-				id,
-				username
+			id,
+			username
 			FROM user
 			WHERE
-				username = ? AND password = ?
+			username = ? AND password = ?
 		`;
 
 		db.query(sql, [name, pass], function (err, results) {

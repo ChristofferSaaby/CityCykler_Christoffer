@@ -1,9 +1,9 @@
-const crud = require('../services/crud.js');
+const produkter = require('../services/produkter.js');
 const kategorier = require('../services/kategorier.js');
 module.exports = (app) => {
    app.get('/cykle_kategori', async function (req, res) {
        try {
-           alleCykler = await crud.getAllProdukter();
+           alleCykler = await produkter.getAllProdukter();
            res.render('pages/cykle_kategori', {
                "cykler": alleCykler
            });
