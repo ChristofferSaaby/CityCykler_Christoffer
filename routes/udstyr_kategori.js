@@ -1,21 +1,13 @@
-const service = require('../services/kategorier.js');
+const kategorier = require('../services/kategorier.js');
 module.exports = (app) => {
    app.get('/udstyr_kategori', async function (req, res) {
-       try {
-           altUdstyr = await service.getAllProdukter();
            res.render('pages/udstyr_kategori', {
-               "udstyr": altUdstyr
            });
-       } catch (err) {
-           console.log(err);
-           res.send(err);
-       }
-   });
-   app.get('/udstyr_kategori/:kategori', async function (req, res) {
+   app.get('/udstyr/:kategori', async function (req, res) {
        try {
-           cykelKategori = await service.getAllProdukterByKategori(req.params.kategori);
-           console.log(cykelKategori);
-           res.render('pages/udstyr_kategori', {
+           cykelKategori = await kategorier.getAllProdukterByKategori(req.params.kategori);
+           //console.log(cykelKategori);
+           res.render('pages/udstyr', {
                "udstyr": cykelKategori
            });
        } catch (err) {
@@ -23,4 +15,5 @@ module.exports = (app) => {
            res.send(err);
        }
    });
+});
 }

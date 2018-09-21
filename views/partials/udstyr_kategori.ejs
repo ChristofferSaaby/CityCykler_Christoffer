@@ -3,56 +3,41 @@
         <hr>
         <ul class="udstyr-kategorier">
             <li>
-                <a href="/udstyr_kategori/7">Cykelhjelme
+                <a href="/udstyr/7">Cykelhjelme
                     <br>
                     <img src="/img/cykelhjelme.jpg">
                 </a>
             </li>
             <li>
-                <a href="/udstyr_kategori/8">Cykelcomputere
+                <a href="/udstyr/8">Cykelcomputere
                     <br>
                     <img src="/img/cykelcomputere.jpg">
                 </a>
             </li>
             <li>
-                <a href="/udstyr_kategori/9">Værktøj
+                <a href="/udstyr/9">Værktøj
                     <br>
                     <img src="/img/vaerktoej.jpg">
                 </a>
             </li>
             <li>
-                <a href="/udstyr_kategori/10">Cykeltøj
+                <a href="/udstyr/10">Cykeltøj
                     <br>
                     <img src="/img/cykeltoej.jpg">
                 </a>
             </li>
             <li>
-                <a href="/udstyr_kategori/11">Barnestole
+                <a href="/udstyr/11">Barnestole
                     <br>
                     <img src="/img/Barnestole.jpg">
                 </a>
             </li>
             <li>
-                <a href="/udstyr_kategori/12">Reservedele
+                <a href="/udstyr/12">Reservedele
                     <br>
                     <img src="/img/reservedele.jpg">
                 </a>
             </li>
         </ul>
-        
-        <li class="produkter">
-            <%
-                    udstyr.forEach( (ar)=> { %>
-                <div id="udstyr-info">
-                    <%- `<p><img src="/img/${ar.billede}"></p>` %>
-                        <%- `<p><strong>Mærke:</strong> ${ar.mærke}</p>` %>
-                            <%- `<p><strong>Model:</strong> ${ar.model}</p>` %>
-                                <%- `<p><strong>Beskrivelse:</strong> ${ar.beskrivelse}</p>` %>
-                                    <%- `<p><strong>Pris:</strong> ${ar.pris}</p>` %>
-                                        <%- `<br>` %>
-                </div>
-                <% });
-                %>
-        </li>
     </div>
    

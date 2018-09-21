@@ -1,13 +1,19 @@
+#wrapper {
+    max-width: 75%;
+    max-height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10%;
+}
 #baggrund {
     background: url("/img/baggrund.png");
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
-    /*width: 100%;*/
+    max-height: 100%;
+    max-width: 100%;
+    visibility: visible;
 }
 
-body {
-    border-radius: 10%, 10%, 10%, 10%;
-}
 
 nav {
     width: 100%;
@@ -40,6 +46,7 @@ nav li {
 a, a:visited {
     text-decoration: none;
     color: #000000;
+
 }
 
 nav li:hover {
@@ -47,10 +54,15 @@ nav li:hover {
     background-color: #767676;
 }
 
-nav li:active {
+nav a:active {
     background-color: #000000 ;
     color: #FFFFFF;
     cursor: default;
+}
+
+nav a:target {
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 #produkter {
@@ -87,25 +99,26 @@ a.læsMere {
     display: flex;
 }
 
-#cykle-info {
+#cykle-info, #udstyr-info {
     width: 100%;
     border: solid #EDEDED;
 }
 
-#cykle-info p {
+#cykle-info p, #udstyr-info p {
     white-space: nowrap;
-    max-width: 1448px;
+    max-width: 80%;
     overflow: hidden;
     text-overflow: ellipsis;
     
 }
-#cykle-info li {
+#cykle-info li, #udstyr-info li {
     width: 100%;
 }
 
-#cykle-info img {
-    height: 116px;
-    width: 80px;
+#cykle-info img, #udstyr-info img {
+    /* max width og height sørger for at elemterne ikke kan have en større størrelse end dette*/
+    max-height: 116px;
+    max-width: 80px;
     float: right;
     display: flex;
    }
@@ -119,4 +132,7 @@ a.læsMere {
        background-color: #C9CACC;
        color: #A4A4A4;
        text-align: center;
+       position: fixed;
+       max-width: 100%;
+       min-width: 75%;
    }
